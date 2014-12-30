@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-6 "http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#author -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;author">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#date -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;date">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;name">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#type -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-6;type">
+        <rdfs:domain rdf:resource="&untitled-ontology-6;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#Film -->
+
+    <owl:Class rdf:about="&untitled-ontology-6;Film"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film1">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2012</date>
+        <name rdf:datatype="&xsd;string">China Town</name>
+        <type rdf:datatype="&xsd;string">comedy</type>
+        <author rdf:datatype="&xsd;string">jorge nicola</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film2">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">1990</date>
+        <name rdf:datatype="&xsd;string">A King in New York</name>
+        <author rdf:datatype="&xsd;string">Lukas Moodysson</author>
+        <type rdf:datatype="&xsd;string">Violence</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film3">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2014</date>
+        <name rdf:datatype="&xsd;string">A Home of Your Own</name>
+        <author rdf:datatype="&xsd;string">Jay Lewis
+</author>
+        <type rdf:datatype="&xsd;string">comedy</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film4 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film4">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2010</date>
+        <name rdf:datatype="&xsd;string">A Hatful of Rain</name>
+        <author rdf:datatype="&xsd;string">Fred Zinnemann</author>
+        <type rdf:datatype="&xsd;string">dramatic</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film5 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film5">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2005</date>
+        <name rdf:datatype="&xsd;string">A Cinderella Story</name>
+        <author rdf:datatype="&xsd;string">Mark Rosman</author>
+        <type rdf:datatype="&xsd;string">comedy</type>
+    </owl:NamedIndividual>
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film6-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film6">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2005</date>
+        <name rdf:datatype="&xsd;string">A Cinderella Story</name>
+        <author rdf:datatype="&xsd;string">Mark Rosman</author>
+        <type rdf:datatype="&xsd;string">comedy</type>
+    </owl:NamedIndividual>
+	
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film7-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film7">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2005</date>
+        <name rdf:datatype="&xsd;string">A Christmas Story</name>
+        <author rdf:datatype="&xsd;string">auth7</author>
+        <type rdf:datatype="&xsd;string">comedy</type>
+    </owl:NamedIndividual>
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film8-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film8">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2003</date>
+        <name rdf:datatype="&xsd;string">XMAN</name>
+        <author rdf:datatype="&xsd;string">auth8</author>
+        <type rdf:datatype="&xsd;string">dramatyc</type>
+    </owl:NamedIndividual>
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film9-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film9">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2003</date>
+        <name rdf:datatype="&xsd;string">kuch kuch hotahai</name>
+        <author rdf:datatype="&xsd;string">auth9</author>
+        <type rdf:datatype="&xsd;string">romantic</type>
+    </owl:NamedIndividual>
+	
+		 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film10-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film10">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">1997</date>
+        <name rdf:datatype="&xsd;string">koyala</name>
+        <author rdf:datatype="&xsd;string">auth9</author>
+        <type rdf:datatype="&xsd;string">romantic</type>
+    </owl:NamedIndividual>
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film11-->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film11">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2000</date>
+        <name rdf:datatype="&xsd;string">mohapatein</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">romantic</type>
+    </owl:NamedIndividual>
+	
+	
+	 <!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film12-->
+	    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film12">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2006</date>
+        <name rdf:datatype="&xsd;string">danny the dog</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">comedy</type>
+    </owl:NamedIndividual>
+	
+	<!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film13-->
+	    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film13">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2003</date>
+        <name rdf:datatype="&xsd;string">the party</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">comedi</type>
+    </owl:NamedIndividual>
+	
+		<!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film14-->
+	    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film14">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2004</date>
+        <name rdf:datatype="&xsd;string">rocky4</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">combat</type>
+    </owl:NamedIndividual>
+	
+	
+		<!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film15-->
+	    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film15">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2002</date>
+        <name rdf:datatype="&xsd;string">rocky 3</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">combat</type>
+    </owl:NamedIndividual>
+	
+	
+		<!-- http://www.semanticweb.org/mohamed/ontologies/2014/10/untitled-ontology-6#film16-->
+	    <owl:NamedIndividual rdf:about="&untitled-ontology-6;film16">
+        <rdf:type rdf:resource="&untitled-ontology-6;Film"/>
+        <date rdf:datatype="&xsd;string">2002</date>
+        <name rdf:datatype="&xsd;string">rocky balboa</name>
+        <author rdf:datatype="&xsd;string">auth11</author>
+        <type rdf:datatype="&xsd;string">combat</type>
+    </owl:NamedIndividual>
+	
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

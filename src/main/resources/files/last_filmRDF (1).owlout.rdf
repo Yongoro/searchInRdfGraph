@@ -1,0 +1,35 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#" > 
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor2_Film1">
+    <rdf:type>http://www.w3.org/2002/07/owl#NamedIndividual</rdf:type>
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#film1</j.0:playing>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Producer1">
+    <rdf:type>http://www.w3.org/2002/07/owl#NamedIndividual</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor9_film1">
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#film1</j.0:playing>
+    <rdf:type>http://www.w3.org/2002/07/owl#NamedIndividual</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#NamedIndividual">
+    <rdf:type>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor4_film1</rdf:type>
+    <rdf:type>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor3_Film1</rdf:type>
+    <rdf:type>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor5_Film1</rdf:type>
+    <rdf:type>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#filmMaker1</rdf:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#filmMaker1">
+    <j.0:makes>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#film1</j.0:makes>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#film1">
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor10_film1</j.0:playing>
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor4_film1</j.0:playing>
+    <j.0:produces>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Producer1</j.0:produces>
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor3_Film1</j.0:playing>
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor8_film1</j.0:playing>
+    <j.0:playing>http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor5_Film1</j.0:playing>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor8_film1">
+    <rdf:type>http://www.w3.org/2002/07/owl#NamedIndividual</rdf:type>
+  </rdf:Description>
+</rdf:RDF>

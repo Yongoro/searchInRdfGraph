@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-8 "http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#makes -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-8;makes">
+        <rdfs:range rdf:resource="&untitled-ontology-8;Film"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;FilmMaker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#playing -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-8;playing">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Actor"/>
+        <rdfs:range rdf:resource="&untitled-ontology-8;Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#produces -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-8;produces">
+        <rdfs:range rdf:resource="&untitled-ontology-8;Film"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Last_Name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;Last_Name">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;FilmMaker"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#age -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;age">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;FilmMaker"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#date -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;date">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Film"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Producer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#first_Name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;first_Name">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Actor"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-8;FilmMaker"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#name -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;name">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Producer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#title -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;title">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#typeFilm -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-8;typeFilm">
+        <rdfs:domain rdf:resource="&untitled-ontology-8;Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor -->
+
+    <owl:Class rdf:about="&untitled-ontology-8;Actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Film -->
+
+    <owl:Class rdf:about="&untitled-ontology-8;Film"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#FilmMaker -->
+
+    <owl:Class rdf:about="&untitled-ontology-8;FilmMaker"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Producer -->
+
+    <owl:Class rdf:about="&untitled-ontology-8;Producer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor4_film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor4_film1">
+        <age rdf:datatype="&xsd;int">47</age>
+        <Last_Name rdf:datatype="&xsd;string">Altman</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">Walter</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+	
+	
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor7_film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor7_film1">
+        <age rdf:datatype="&xsd;int">28</age>
+        <Last_Name rdf:datatype="&xsd;string">karim</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">antoin</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+	
+	
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor8_film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor8_film1">
+        <age rdf:datatype="&xsd;int">25</age>
+        <Last_Name rdf:datatype="&xsd;string">mehdi</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">abdalloui</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+    
+	
+	  <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor9_film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor9_film1">
+        <age rdf:datatype="&xsd;int">55</age>
+        <Last_Name rdf:datatype="&xsd;string">alassane</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">ndiaye</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+	
+		
+	  <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor10_film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor10_film1">
+        <age rdf:datatype="&xsd;int">45</age>
+        <Last_Name rdf:datatype="&xsd;string">yorick</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">mvou</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+	
+	
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Actor5_Film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Actor5_Film1">
+        <age rdf:datatype="&xsd;int">43</age>
+        <Last_Name rdf:datatype="&xsd;string">Akbari</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">Mania</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+    
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#Producer1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;Producer1">
+        <date rdf:datatype="&xsd;string">12/06/2010</date>
+        <name rdf:datatype="&xsd;string">Gary Lennon</name>
+        <produces rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor1_Film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;actor1_Film1">
+        <age rdf:datatype="&xsd;int">26</age>
+        <first_Name rdf:datatype="&xsd;string">Michael</first_Name>
+        <Last_Name rdf:datatype="&xsd;string">Winterbottom</Last_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor2_Film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;actor2_Film1">
+        <age rdf:datatype="&xsd;int">54</age>
+        <Last_Name rdf:datatype="&xsd;string">Moresco</Last_Name>
+        <first_Name rdf:datatype="&xsd;string">Robert</first_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#actor3_Film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;actor3_Film1">
+        <first_Name rdf:datatype="&xsd;string"> Spike</first_Name>
+        <age rdf:datatype="&xsd;int">65</age>
+        <Last_Name rdf:datatype="&xsd;string">Lee</Last_Name>
+        <playing rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#film1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;film1">
+        <date rdf:datatype="&xsd;string">12/06/2010</date>
+        <title rdf:datatype="&xsd;string">Walter Hill</title>
+        <typeFilm rdf:datatype="&xsd;string">dramatique</typeFilm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2014/11/untitled-ontology-8#filmMaker1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-8;filmMaker1">
+        <age rdf:datatype="&xsd;string">55</age>
+        <first_Name rdf:datatype="&xsd;string">Angus</first_Name>
+        <Last_Name rdf:datatype="&xsd;string">Macfadyen</Last_Name>
+        <makes rdf:resource="&untitled-ontology-8;film1"/>
+    </owl:NamedIndividual>
+	
+	</rdf:RDF>
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
+	
+	
+	
+	
+	
+	
+	
