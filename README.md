@@ -12,7 +12,7 @@ In command line.
 
 For a correct use, follow these steps
 
-1- download the latest version of maven  : < a href ="http://maven.apache.org/download.cgi"> here </a>
+1- download the latest version of maven  : http://maven.apache.org/download.cgi
    and unzip it into a desired folder (exemple: c:\apache-maven-3.0.4)
   
 2- configure environnement variables (we'll illustrate windows configuration)
@@ -29,7 +29,8 @@ For a correct use, follow these steps
 3- execution
 
     • Move to a desired folder and clone the project
-    • with the prompt, move to the folder (where you'll find pom.xml and src folder) and enter command $mvn package
+    • with the prompt, move to the folder (where you'll find pom.xml and src folder) and enter command
+            $mvn package
     • a folder target will be created, then move to target (cd target) and enter cammand 
             $java -jar rdfSearch-x.x.x-jar-with-dependencies.jar
     • select a RDF/OWL file by selecting the open menuitem of the menu File
