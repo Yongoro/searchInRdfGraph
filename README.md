@@ -37,5 +37,5 @@ For a correct use, follow these steps
     • enter key words to make your research
     • click on the refresh button to create the result graph on a new tab
     
-Enjoy making searching on RDF graphs
+Enjoy searching on RDF graphs
 
