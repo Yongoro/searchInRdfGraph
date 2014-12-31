@@ -1,9 +1,9 @@
 searchInRdfGraph
 ================
 
-searching in web semantic
+Searching in web semantic
 
-This project allow to make research on RDF/OWL graphs
+This project allows to make research on RDF/OWL graphs
 
 You can execute the project either within an IDE as Eclipse (make sure to import it as a MAVEN project)
 or in command line
