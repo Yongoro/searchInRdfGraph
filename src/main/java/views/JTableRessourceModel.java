@@ -57,7 +57,7 @@ public class JTableRessourceModel extends  AbstractTableModel{
 		    // comptabilisons le nombre de documents 
 		    nDocuments += value.size();		    
 		}
-		System.out.println("nombre de docs: "+nDocuments);
+		//System.out.println("nombre de docs: "+nDocuments);
 		return nDocuments;
 	}
 

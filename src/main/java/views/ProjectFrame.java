@@ -35,6 +35,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 //import javax.swing.JSplitPane;
@@ -50,12 +51,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import org.apache.lucene.document.Document;
 import org.graphstream.graph.implementations.SingleGraph;
 
+import sparql.SPARQL;
 import lucene.Indexing;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
@@ -67,7 +65,7 @@ import com.hp.hpl.jena.util.FileManager;
 public class ProjectFrame  
 {
 	//private static final long serialVersionUID = 1L;
-	private JTabbedPane onglet;
+	public static JTabbedPane onglet;
 	//private JSplitPane split;
 	private JPanel topPanel = new JPanel(new FlowLayout());
 	private	JButton bt_updateGraph;
@@ -110,11 +108,11 @@ public class ProjectFrame
 	//private JPanel mainPanel = new JPanel(new FlowLayout());
 	//private JPanel mainPanelgrph = new JPanel(new FlowLayout());
 
-	// Lien  du fichier RDF  DE L'ARBRE DE  STEINER
+	//Lien  du fichier RDF  DE L'ARBRE DE  STEINER
 	private String LienFichierRDF;
 
 	//MODEL RDF de L'ARBRE DE  STEINER
-	private Model ModelSparql;
+	public static Model ModelSparql;
 
 	//tableau pourr visualiser les resultats de la recherche					
 	private JTable tableau; 
@@ -131,10 +129,10 @@ public class ProjectFrame
 		url_iconExit = this.getClass().getResource("/icones/logout.png");
 		url_iconRefresh = this.getClass().getResource("/icones/refresh.png");
 		
-		System.out.println("----------------------------------");		
-		System.out.println(url_iconNew);
-		System.out.println(url_iconExit);
-		System.out.println(url_iconRefresh);		
+		//System.out.println("----------------------------------");		
+		//System.out.println(url_iconNew);
+		//System.out.println(url_iconExit);
+		//System.out.println(url_iconRefresh);		
 		
 		/* récupération des images */
 		imgNew = toolkit.getImage(url_iconNew);
@@ -264,8 +262,8 @@ public class ProjectFrame
 			public void insertUpdate(DocumentEvent de) { 
 				if(change!=1)
 				{
-					System.out.println("INsert");
-					System.out.println(EditeurRdf.getText());
+					//System.out.println("INsert");
+					//System.out.println(EditeurRdf.getText());
 
 					FileWriter fw = null;
 					try {
@@ -292,7 +290,7 @@ public class ProjectFrame
 						texteEditor=true;
 						action.SetTexteEditor( false);
 						fr.uvsq.project.rdfSearch.App.index = new Indexing(model);
-						System.out.println("fichier tmp.rdf chargée!");
+						//System.out.println("fichier tmp.rdf chargée!");
 						javax.swing.JOptionPane.showMessageDialog(f,"fichier 'tmp.rdf' créé dans 'src/main/java/jena/'. Aller sur l'onglet 'Recherche'pour débuter"); 
 
 					} 
@@ -306,14 +304,15 @@ public class ProjectFrame
 			}
 
 			public void removeUpdate(DocumentEvent de){
-				System.out.println("Remove");
+				//System.out.println("Remove");
 				if(change==0){}
 				else
 					change=1;
 			}
 
 			public void changedUpdate(DocumentEvent arg0) {
-				System.out.println("change");change=1;
+				//System.out.println("change");
+				change=1;
 			}
 		}); //end documentListener
 
@@ -358,14 +357,15 @@ public class ProjectFrame
 				ModelSparql=GrapheSteiner.getNewmodel();
 
 				//Permet de Vérifier le contenu du nouvel model 'ModelSparql' crée
-				parcours();
+				
+				//parcours();
 
 				//On récupère le  path du fichier rdf ou owl sélectionné à partir de  la classe OpenFileChooserAction
 				String split=action.getpath()[1];
 
 				//On associe le path 'split' au  fichier  'out.rdf dans lequel le model 'ModelSparql' va être générer (en rdf)
 				LienFichierRDF=split+"out.rdf";
-				System.out.println("liens----->"+a+" "+"split:"+ LienFichierRDF);
+				//System.out.println("liens----->"+a+" "+"split:"+ LienFichierRDF);
 
 				//création du fichier rdf du graph  de Steiner ' GrapheSteiner'
 				//à partir du model  'ModelSparql' si le model a été crée vous devez lire son fichier RDF dans 
@@ -373,54 +373,14 @@ public class ProjectFrame
 
 				//GrapheSteiner.ecrireFileRDF( LienFichierRDF);
 
-				//***********************************************************************//
-				//***********************  SPARQL QUERIES *******************************//
-				//***********************************************************************//
-
-				// String queryString = "CONSTRUCT {?subj ?prop ?obj }"
-				// 					+ " WHERE { ?subj a ?obj "
-				// 					+ "FILTER (?obj rdfs:subClassOf* ?subj.)}";
-
-				/* String queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "        
-							    		+"PREFIX owl:  <http://www.w3.org/2002/07/owl#> "
-							    		+"PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#> "
-							    		+"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-							    		+"PREFIX film: <http://data.linkedmdb.org/directory/film_company#>"
-							 			+"CONSTRUCT { ?sub ?prop ?y }"
-							    		+"WHERE { ?sub ?prop ?y }";
-					 					//+ "WHERE { ?t rdfs:subClassOf* film:Class . ?y rdf:type ?t }";
-
-				 */
-
-				String queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "        
-						+"PREFIX owl:  <http://www.w3.org/2002/07/owl#> "
-						+"PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#> "
-						+"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-						//+"PREFIX film: <http://data.linkedmdb.org/directory/film_company#>"
-						+"CONSTRUCT { ?sub rdf:type  ?obj }"
-						//+ "?sub   rdf:type owl:Class }"
-						+"WHERE {?sub   rdf:type ?obj }";
+				//generation and execution of SPARQL queries				
+				String queryString = SPARQL.createQuerySPARQL();
+				if(! queryString.equals("ko"))
+					SPARQL.executeQuerySPARQL(queryString);
+				else{
+					JOptionPane.showMessageDialog(f, "Choose a class keyword (Film, Actor, Producer, Film maker)!","Class Required", JOptionPane.ERROR_MESSAGE);
+				}					
 				
-				Query query = QueryFactory.create(queryString) ;
-				QueryExecution qexec = QueryExecutionFactory.create(query, ModelSparql);			 
-
-				try {					  
-					//ResultSet results = qexec.execSelect();
-					Model resultModel = qexec.execConstruct() ;		
-					org.graphstream.graph.Graph graphsparc = new SingleGraph("GraphSparql");
-
-					//LIGNE ERIC
-
-					System.out.println("LE MODEL SPARK RENVOIE:"+resultModel.size()+" "+"NOEUDS");
-					@SuppressWarnings("unused")
-					SousGraph GrapheSparql=new SousGraph(graphsparc,onglet,resultModel,false);
-					//output query result
-
-					//ResultSetFormatter.out(System.out, results, query);					
-				} 
-				finally{					  
-					qexec.close();
-				}
 			}//end actionPerformed
 		});//end actionListener bt_updateGraph		
 	}//end initActions
@@ -430,9 +390,8 @@ public class ProjectFrame
 		InitActions();	
 	}	
 	
-	//PARCOUR DU MOte()DEL  ModelSparql
-
-	public void parcours(){
+	//parcours du ModelSparql
+/*	public void parcours(){
 
 		StmtIterator iter =  ModelSparql.listStatements();
 		while (iter.hasNext()) {
@@ -453,6 +412,7 @@ public class ProjectFrame
 			System.out.println(" .");
 		}
 	}
+*/
 } //<------- VERIFIER OU CA OUVRE
 
 class OpenFileChooserAction implements ActionListener{
@@ -484,9 +444,9 @@ class OpenFileChooserAction implements ActionListener{
 		
 		URL url_rdfs = this.getClass().getResource("/files");
 		
-		System.out.println("-------------------------");
-		System.out.println("pour fichiers");
-		System.out.println(url_rdfs);
+		//System.out.println("-------------------------");
+		//System.out.println("pour fichiers");
+		//System.out.println(url_rdfs);
 		
 		texteEditor=true;		
 		//String DEFAULT_PATH ="src/main/resources/files";		
@@ -521,7 +481,7 @@ class OpenFileChooserAction implements ActionListener{
 			pass1=file.getPath().replaceAll(file.getName(),"");
 
 			Model model = FileManager.get().loadModel(pass);
-			System.out.println("NOM DU FICHIER :"+pass);
+			//System.out.println("NOM DU FICHIER :"+pass);
 			//creation of the index on the passed model
 			try {
 				fr.uvsq.project.rdfSearch.App.index = new Indexing(model);
@@ -555,8 +515,8 @@ class MyMenuBar extends JMenuBar {
 		url_logo = this.getClass().getResource("/icones/newuvsq.jpg");
 		imgLogo = toolkit.getImage(url_logo);
 		
-		System.out.println("-------------------------");
-		System.out.println("url logo"+url_logo);
+		//System.out.println("-------------------------");
+		//System.out.println("url logo"+url_logo);
 		
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.BLACK);

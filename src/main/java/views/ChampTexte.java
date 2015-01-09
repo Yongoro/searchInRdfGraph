@@ -84,7 +84,7 @@ public class ChampTexte extends JTextField implements DocumentListener {
 				//recuperation des eventuels documents trouvés
 				resultats= search.getKeywordResource();	
 				
-				System.out.println(motif+": result ds champ texte "+resultats);
+				//System.out.println(motif+": result ds champ texte "+resultats);
 				
 			} 
 	    	catch (Exception e1) {			

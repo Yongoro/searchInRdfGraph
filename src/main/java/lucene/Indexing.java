@@ -183,6 +183,9 @@ public class Indexing {
 		}		
 	}	
 	
+	/**
+	 * delete the directory containing indexes
+	 */
 	private void deleteDirectory(){
 	  if(indexFile.exists()){
 	    File[] files =  indexFile.listFiles();
